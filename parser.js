@@ -22,7 +22,7 @@ const parseLatestCrashHistory = async () => {
 
 const writeNumbersToFile = (number) => {
     const timestamp = new Date().toISOString(); // Add timestamp for each entry
-        fs.appendFileSync('crashHistory.txt', `${number.toString().replace('.', ',')}\n`);
+    fs.appendFileSync('crashHistory.txt', `${number.toString().replace('.', ',')}\n`);
 };
 
 const checkAndParse = async () => {
@@ -44,4 +44,4 @@ const checkAndParse = async () => {
 };
 
 checkAndParse();
-setInterval(checkAndParse, 15000);
+setInterval(checkAndParse, 10000);
